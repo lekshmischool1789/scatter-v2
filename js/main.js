@@ -70,6 +70,7 @@ vis.radius = 7;
         .attr('r', vis.radius)
         .attr('cx', function(d){return vis.x(d['Q/I'])})
         .attr('cy', function(d){return vis.y(d['U/I'])})
+        .attr('opacity', 0.7)
         // .attr('fill','#A8A8A8');
         .attr('fill', '#A8A8A8');
 
@@ -92,6 +93,7 @@ function intensity_update() {
                 return vis.y(d['U/I'])
             })
             .attr('fill', '#A8A8A8')
+            .attr('opacity', 0.7)
             .merge(u)
             .transition()
             .duration(500)
